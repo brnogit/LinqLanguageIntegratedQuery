@@ -30,6 +30,10 @@ namespace LinqLanguageIntegratedQuery
             var orderedByGrade = students.OrderBy(s => s.Grade);
             var orderedByGradeDescending = students.OrderByDescending(s => s.Grade);
 
+            var approvedStudents = students.Where(s => s.Grade >= 70);
+
+            
+
 
             #endregion LINQ
 
