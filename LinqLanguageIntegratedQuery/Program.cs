@@ -35,7 +35,10 @@ namespace LinqLanguageIntegratedQuery
             var grades = students.Select(s => s.Grade);
             var phoneNumbers = students.SelectMany(s => s.PhoneNumbers);
 
-            
+            var sum = students.Sum(s => s.Grade);
+            var min = students.Sum(s => s.Grade);
+            var max = students.Sum(s => s.Grade);
+            var count = students.Count;
 
 
             #endregion LINQ
