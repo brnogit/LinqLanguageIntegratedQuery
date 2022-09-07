@@ -27,7 +27,8 @@ namespace LinqLanguageIntegratedQuery
             var first = students.First(s => s.FullName == "Luis");
             var firstOrDefault = students.FirstOrDefault(s => s.Grade == 0);
 
-            
+            var orderedByGrade = students.OrderBy(s => s.Grade);
+            var orderedByGradeDescending = students.OrderByDescending(s => s.Grade);
 
 
             #endregion LINQ
