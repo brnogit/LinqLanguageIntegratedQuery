@@ -24,7 +24,10 @@ namespace LinqLanguageIntegratedQuery
             var single = students.Single(s => s.Id == 1);
             var singleOrDefault = students.SingleOrDefault(s => s.Grade == 0);
 
+            var first = students.First(s => s.FullName == "Luis");
+            var firstOrDefault = students.FirstOrDefault(s => s.Grade == 0);
 
+            
 
 
             #endregion LINQ
