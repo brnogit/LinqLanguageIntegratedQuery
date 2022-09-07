@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LinqLanguageIntegratedQuery
 {
@@ -8,7 +9,7 @@ namespace LinqLanguageIntegratedQuery
         static void Main(string[] args)
         {
             #region LINQ
-            var stundents = new List<Student>
+            var students = new List<Student>
             {
                 new Student(1, "Luis", "12345678910", 100),
                 new Student(2, "Roberto", "98765432110", 35),
@@ -16,6 +17,16 @@ namespace LinqLanguageIntegratedQuery
                 new Student(4, "Helena", "78945612301", 70),
                 new Student(5, "Luis", "43265487699", 75)
             };
+
+            var any = students.Any();
+            var any100 = students.Any(s => s.Grade == 100);
+
+            var single = students.Single(s => s.Id == 1);
+            var singleOrDefault = students.SingleOrDefault(s => s.Grade == 0);
+
+
+
+
             #endregion LINQ
 
             Console.ReadKey();
