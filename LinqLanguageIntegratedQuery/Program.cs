@@ -32,6 +32,9 @@ namespace LinqLanguageIntegratedQuery
 
             var approvedStudents = students.Where(s => s.Grade >= 70);
 
+            var grades = students.Select(s => s.Grade);
+            var phoneNumbers = students.SelectMany(s => s.PhoneNumbers);
+
             
 
 
